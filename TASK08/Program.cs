@@ -6,12 +6,12 @@
 
 Console.Write("Введите число = ");
 int number = Convert.ToInt32(Console.ReadLine());
-if(number>=2)
+if (number >= 2)
 {
-for(int i=2; number>=i; i +=2)
-{
-    Console.WriteLine($"{i}");
-}
+    for (int i = 2; number >= i; i += 2)
+    {
+        Console.WriteLine($"{i}");
+    }
 }
 else
 {
