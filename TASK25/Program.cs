@@ -3,23 +3,26 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.Write("Введите число А = ");
-int numberA = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число B = ");
-int numberB = Convert.ToInt32(Console.ReadLine());
-int result = numberA;
-if (numberB > 0)
+// Console.Write("Введите число А = ");
+// int numberA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число B = ");
+// int numberB = Convert.ToInt32(Console.ReadLine());
+// int result = numberA;
+// if (numberB > 0)
+// {
+//     for (int i = 1; numberB > i; i++)
+//     {
+//         result = result*numberA;
+//     }
+
+//     Console.WriteLine(result);
+// }
+// else
+// {
+//     Console.WriteLine("Ошибка! Число В должно быть натуральным");
+// }
+
+int Prompt(string messege)
 {
-    for (int i = 1; numberB > i; i++)
-    {
-        result = result*numberA;
-    }
-
-    Console.WriteLine(result);
+    System.Console.Write(message)
 }
-else
-{
-    Console.WriteLine("Ошибка! Число В должно быть натуральным");
-}
-
-
