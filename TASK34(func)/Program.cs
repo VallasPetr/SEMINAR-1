@@ -3,17 +3,24 @@
 
 // [345, 897, 568, 234] -> 2
 
-int[] array = new int[5];
-int count = array.Length;
-for (int i = 0; count > i; i++)
+
+int[] array=RandomArray(1, 3, 5);
+
+int[] RandomArray(int from, int to, int lengthArray)
 {
-    int randomNumber = new Random().Next(100, 1000);
-    array[i] = randomNumber;
-    Console.Write(array[i] + " ");
+int[] array = new int[lengthArray];
+for (int i = 0; array.Length > i; i++)
+{
+    array[i] = new Random().Next(from, to+1);    
+}
+return array;
 }
 
-Console.WriteLine();
-
+for(int i=0;i<array.Length;i++)
+{
+    Console.Write(array[i] + " ");
+}
+int count = array.Length;
 int countEven = 0;
 for (int i = 0; i < count; i++)
 {
