@@ -1,7 +1,7 @@
-﻿// Задайте массив заполненный случайными положительными трёхзначными числами (длина массива 5 элементов). 
-// Напишите программу, которая покажет количество чётных чисел в массиве.
-
-// [345, 897, 568, 234] -> 2
+﻿// Задайте одномерный массив, заполненный случайными числами (длина массива 5 элементов). 
+// Найдите сумму элементов, стоящих на нечётных индексах (индексы с нуля).
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
 
 int[] RandomArray(int from, int to, int lengthArray)
 {
@@ -13,14 +13,19 @@ int[] RandomArray(int from, int to, int lengthArray)
     return array;
 }
 
-int CounterEven(int[] array)
+int SumOddIndex(int[] array)
 {
-    int countEven = 0;
+    int sumOddIndex=0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 == 0) countEven++;
+        if (i % 2 == 1)
+        {
+            
+            sumOddIndex += array[i];
+        }
+        
     }
-    return countEven;
+    return sumOddIndex;
 }
 
 void PrintArray(int[] array)
@@ -34,13 +39,19 @@ void PrintArray(int[] array)
                                                                   // через else c квадратной скобкой в конце
 }
 
-
-int[] array = RandomArray(100, 999, 5); // Вызов метода построения массива случайных чисел
-
-int counterEven = CounterEven(array);   // Вызов метода подсчёта чётных чисел в массиве
-
-PrintArray(array);                      // Вызов метода вывода массива
-
+int[] array = RandomArray(100, 999, 5);
+int sumOddIndex = SumOddIndex(array);
+PrintArray(array);
 Console.WriteLine();
+Console.WriteLine($"Сумма чисел на нечётных индексах = {sumOddIndex}");
 
-Console.WriteLine($"Количество чётных чисел = {counterEven}");
+
+
+
+
+
+
+
+
+
+

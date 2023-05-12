@@ -4,20 +4,19 @@
 // [-4, -6, 89, 6] -> 0
 
 int[] array = new int[5];
-int count = array.Length;
-int odd=0;
-
-for (int i = 0; count > i; i++)
+int SumOddIndex = 0;
+for (int i = 0; array.Length > i; i++)
 {
-    int randomNumber = new Random().Next();
+    int randomNumber = new Random().Next(100, 1000);
     array[i] = randomNumber;
-    if(i%2==1) 
+    if (i % 2 == 1)
     {
-        odd+=array[i];
+        SumOddIndex += array[i];
     }
     Console.Write(array[i] + " ");
-    
+
 }
+
 Console.WriteLine();
-Console.Write(odd);
+Console.Write($"Сумма чисел на нечётных индексах = {SumOddIndex}");
 
